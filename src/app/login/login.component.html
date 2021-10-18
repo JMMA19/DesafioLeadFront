@@ -1,0 +1,27 @@
+<app-navbar></app-navbar>
+<body>
+    <div id="login">
+        <div class="container">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div id="login-box" class="col-md-12">
+                        <div id="login-form" class="form">
+                            <h3 class="text-center text-light">Login</h3>
+                            <div class="form-group">
+                                <label for="username" class="text-light">CPF:</label><br>
+                                <input type="text" [(ngModel)]="usuario.cpf" id="username" class="form-control" placeholder="Digite seu CPF">
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="text-light" >Senha:</label><br>
+                                <input  type="password" [(ngModel)]="usuario.senha" id="password"  class="form-control" placeholder="Digite sua senha" >
+                            </div>
+                            <div class="submit">
+                                <input type="submit"  class="btn btn-dark" name="submit" (click)="fazerLogin()" >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

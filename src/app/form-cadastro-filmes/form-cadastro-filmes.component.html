@@ -1,0 +1,56 @@
+<form [formGroup]="filmeform">
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <label class="form-label">Titulo</label>
+                <input type="text" class="form-control" id="" formControlName="Titulo">
+            </div>
+            <div class="col-4">
+                <label class="form-label">Data de Lançamento</label>
+                <input type="date" class="form-control" id="" formControlName="Data_lancamento" >
+              </div>
+        </div>
+        <div class="row">
+            <div class="col-8">
+                <label class="form-label">Imagem(infelizmente é link do Google)</label>
+                <input type="sel" class="form-control" id="" formControlName="imagem" >
+            </div>
+            
+            <div class="col-4">
+                <label class="form-label">Duração</label>
+                <input type="time" class="form-control" id="" formControlName="Duracao">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <label class="form-label">Categoria</label>
+               <select formControlName="categoria" class="form-select">
+                    <option *ngFor="let cat of categoriaList" [value]="cat.Nome">{{cat.Nome}}</option>
+                </select>
+            </div>
+            <div class="col-6">
+                <label class="form-label">Idioma</label>
+                <select class="form-select" formControlName="idioma">
+                    <option>Portugues</option>
+                    <option>Eepanhol</option>
+                    <option>Inglês</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <label class="form-label">Sinopse</label>
+                <input type="text" class="form-control" id="" formControlName="Sinopse">
+            </div>
+        </div>
+        
+        <div class="row align-items-center" > 
+            <div class="col-1 mx-auto">
+                <div class="jumbotron">
+                <button type="submit" class="btn btn-primary"  name="submit" (click)="submeter()">Submit</button>
+            </div>
+            </div> 
+        </div> 
+                       
+    </div> 
+</form>
