@@ -1,0 +1,11 @@
+.contrast{
+    background-color: rgb(0, 0, 0);
+}
+.contrast h1{
+    color: brown;
+}
+
+.contrast input{
+    background:rgb(0, 0, 0);
+    color: rgb(238, 255, 0);
+}

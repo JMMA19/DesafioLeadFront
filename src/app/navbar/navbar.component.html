@@ -10,6 +10,9 @@
           <li class="navbar-brand">
             <a class="nav-link" href="/cadastroFilmes">Cadastrar Filmes</a>
           </li>
+          <li class="navbar-brand">
+            <button type="button" class="btn btn-info" title="Aplicar Auto Contraste" (click)='changeConstrast()'>contraste</button> 
+          </li>
         </ul>
         <form class="d-flex" [formGroup] = 'filmeSerch'>
           <input class="form-control me-2" type="search" placeholder="Listar Filmes" aria-label="Search" formControlName="Titulo">

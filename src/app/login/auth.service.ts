@@ -27,17 +27,15 @@ export class AuthService {
       let senha = usuario.senha;
      return this.http.post<any>(`/api//Auth`, {cpf, senha})
    }
- /*  fazerLogin(usuario: usuario){
+ 
 
-    if(usuario.cpf == "042" && usuario.senha == "123"){
-      this.userAutenticado = true;
-      this.router.navigate(['/login']);
-    }else{
-      this.userAutenticado = false;
-    }
-  }
   usuarioautenticado(){
-   return this.userAutenticado;
-  } */
+    let token = window.localStorage.getItem('auth');
+   if(token != null){
+      return this.userAutenticado = true;
+    }else{
+      return this.userAutenticado = false;
+    }
+  } 
  
 }

@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { NavbaServiceService } from './navba-service.service';
 
 
 
@@ -13,13 +14,15 @@ export class NavbarComponent implements OnInit {
 
   
 
-   filmeSerch! : FormGroup;
+  filmeSerch! : FormGroup;
+  highContrast: boolean = false;
    
    
 
   constructor(
     private fb : FormBuilder,
     private router : Router,
+    private nvb : NavbaServiceService
    
     
   ) { 
@@ -34,6 +37,11 @@ export class NavbarComponent implements OnInit {
     this.filmeSerch = this.fb.group({
       Titulo : [null]
     })
+  }
+
+  changeConstrast(){
+    this.highContrast = !this.highContrast;
+    this.nvb.mudaAltoContraste(this.highContrast);
   }
 
   pesquisar(){
