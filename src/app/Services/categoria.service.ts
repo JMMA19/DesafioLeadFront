@@ -19,7 +19,7 @@ export class CategoriaService {
    ) { }
 
    public obterCategorias(): Observable<Categoria[]>{
-     return this.httpClient.get<Categoria[]>(this.apiUrl);
+     return this.httpClient.get<Categoria[]>('/api/Categoria/show');
    }
 
 }

@@ -11,11 +11,11 @@ export class AuthService {
   private  userAutenticado : boolean = false;
 
   constructor(
-    private htpp: HttpClient,
+    private http: HttpClient,
     private router : Router
     ) { }
 
-    apiUrl = 'http://localhost:8080/Auth'
+    
     httpOptions = {
       headers: new HttpHeaders({
        'Content-Type':'application/jason'
@@ -23,9 +23,9 @@ export class AuthService {
     }
 
     auth(usuario: usuario){
-      let email = usuario.cpf;
+      let cpf = usuario.cpf;
       let senha = usuario.senha;
-     return this.htpp.post<any>(this.apiUrl, {email, senha}, this.httpOptions)
+     return this.http.post<any>(`/api//Auth`, {cpf, senha})
    }
  /*  fazerLogin(usuario: usuario){
 

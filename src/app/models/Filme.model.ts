@@ -6,6 +6,7 @@ export class Filme{
 	imagem!: string;
 	Data_lancamento!: string;
 	Duracao!: number  ; 
+	categoria!: {Id: number; Nome:string; Tag:string;}
     idioma!: { ID: Number; Nome: string; Tag: string;}  
-	categoria!: {ID: number; Nome:string; Tag:string;}   
+	   
 }

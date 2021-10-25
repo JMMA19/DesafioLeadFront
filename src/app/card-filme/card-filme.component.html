@@ -1,16 +1,21 @@
-<div class="row row-cols" >
-    <ng-container *ngFor="let filme of Filmeslist">
-      <div class="card " style="width: 18rem;">
-        <h1 class="card-title" >{{filme.Titulo}} </h1>
-        <h6 class="card-text" >{{filme.idioma.Tag}}</h6>
-        <img class="card-img-top" src="{{filme.imagem}}"  height="50%">
-        <div class="card-body">
-          <h6 class="card-text" >Sinopse</h6>
-          <p class="card-text">{{filme.Sinopse}}</p>
-          <a href="#" class="btn btn-primary">detalhes</a>
-        </div>
-      </div>
-    
 
-    </ng-container>
+<div  >
+    <H1 *ngIf="Titulo === 'invalid'" id="color">Filme Não encontrado!</H1>
+    <h1 *ngIf="Titulo != 'invalid'">Filmes Disponiveis:</h1>
 </div>
+
+
+<div  class="row" >
+  
+    <ng-container *ngFor="let filme of Filmeslist">
+        <div  class="card ">
+            <h1 class="card-title" >{{filme.Titulo}} </h1>
+            <h6 class="card-text" >{{filme.idioma.Tag}}</h6>
+            <img class="card-img-top" src="{{filme.imagem}}">
+            <button type="submit" value ="getid()" id="btn"class="btn btn-light">detalhes</button>
+        </div>
+    </ng-container>
+
+</div>
+
+

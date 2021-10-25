@@ -1,0 +1,25 @@
+label{
+    color: floralwhite;
+}
+
+#cadastroFilme .container{
+        margin-left: 30;
+        margin-top: 5%;
+        max-width: 1400px;
+        height: 450px;
+        border: 1px solid #ffffff;
+        background-color: rgba(34, 34, 34, 0.5);
+        
+      
+}
+#cadastroFilme .container .row{
+    margin-top: 1%;
+}
+
+#cadastroFilme .container #botao #submit{
+    font-size: 120%;
+    margin-left: 70%;
+    width: 30%;
+    border: 1px solid #ffffff;
+    margin-top: 3%;
+}

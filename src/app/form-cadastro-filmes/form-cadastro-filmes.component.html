@@ -1,3 +1,4 @@
+<div id = "cadastroFilme">
 <form [formGroup]="filmeform">
     <div class="container">
         <div class="row">
@@ -44,13 +45,12 @@
             </div>
         </div>
         
-        <div class="row align-items-center" > 
-            <div class="col-1 mx-auto">
-                <div class="jumbotron">
-                <button type="submit" class="btn btn-primary"  name="submit" (click)="submeter()">Submit</button>
-            </div>
-            </div> 
+        <div id="botao" > 
+                           
+                <button id = "submit" type="submit" class="btn btn-dark"  name="submit" (click)="submeter()">Cadastrar</button>
+                       
         </div> 
                        
     </div> 
 </form>
+</div>

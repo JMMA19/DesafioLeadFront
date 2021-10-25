@@ -12,7 +12,6 @@ export class FilmeListComponent implements OnInit {
   constructor() { }
  
   ngOnInit(): void {
-  
   }
 
  
